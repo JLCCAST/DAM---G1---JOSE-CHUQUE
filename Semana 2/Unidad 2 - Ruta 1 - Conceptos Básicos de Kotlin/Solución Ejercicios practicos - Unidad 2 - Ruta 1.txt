@@ -1,0 +1,161 @@
+Ejercicio 1:
+
+fun main() {
+    val morningNotification = 51
+    val eveningNotification = 135
+    
+    printNotificationSummary(morningNotification)
+    printNotificationSummary(eveningNotification)
+}
+
+
+fun printNotificationSummary(numberOfMessages: Int) {
+    if (numberOfMessages>=100) {
+        println("Your phone is blowing up! You have 99+ notifications.")
+    } else {
+        println("You have $numberOfMessages notifications.")
+    }
+}
+
+Ejercicio 2:
+
+fun main() {
+    val child = 5
+    val adult = 28
+    val senior = 87
+    
+    val isMonday = true
+    
+    println("The movie ticket price for a person aged $child is \$${ticketPrice(child, isMonday)}.")
+    println("The movie ticket price for a person aged $adult is \$${ticketPrice(adult, isMonday)}.")
+    println("The movie ticket price for a person aged $senior is \$${ticketPrice(senior, isMonday)}.")
+}
+
+fun ticketPrice(age: Int, isMonday: Boolean): Int {
+    if (age<=12) {
+        return 15
+    } else if (isMonday == true && age>12 && age<=60 ) {
+        return 25
+    } else if (isMonday == false && age>12 && age<=60) {
+        return 30
+    } else if (age>60 && age<=100) {
+        return 20
+    } else {
+        return -1
+    }
+}
+
+Ejercicio 3:
+
+fun main() {
+    printFinalTemperature(27.0,"Celsius", "Fahrenheit", {9.0 / 5.0 * it + 32})
+    printFinalTemperature(350.0, "Kelvin", "Celsius", {it - 273.15})
+    printFinalTemperature(10.0,"Fahrenheit", "Kelvin", {5.0 / 9.0 * (it - 32.0) + 273.15 })
+}
+
+
+fun printFinalTemperature(
+    initialMeasurement: Double, 
+    initialUnit: String, 
+    finalUnit: String, 
+    conversionFormula: (Double) -> Double
+) {
+    val finalMeasurement = String.format("%.2f", conversionFormula(initialMeasurement)) // two decimal places
+    println("$initialMeasurement degrees $initialUnit is $finalMeasurement degrees $finalUnit.")
+}
+
+Ejercicio 4:
+
+class Song(
+    val titulo: String,
+    val artista: String,
+    val anioPublicacion: Int,
+    val recuentoReproducciones: Int
+) {
+    
+    val esPopular: Boolean = recuentoReproducciones >= 1000
+
+    fun imprimirDescripcion() {
+        println("$titulo, interpretada por $artista, se lanzó en $anioPublicacion.")
+    }
+}
+
+fun main () {
+    val song = Song("Thriller", "Mickael Jackson", 1982, 5000000)
+    
+    song.imprimirDescripcion()
+}
+
+Ejercicio 5:
+
+fun main() {    
+    val amanda = Person("Amanda", 33, "play tennis", null)
+    val atiqah = Person("Atiqah", 28, "climb", amanda)
+    
+    amanda.showProfile()
+    atiqah.showProfile()
+}
+
+
+class Person(val name: String, val age: Int, val hobby: String?, val referrer: Person?) {
+    fun showProfile() {
+        println("Name: $name")
+        println("Age: $age")
+        
+        if (referrer == null) {
+            println("Likes to $hobby. Doesn't have a referrer.\n")
+        } else {
+            println("Likes to $hobby. Has a referrer named ${referrer.name}, who likes to ${referrer.hobby}.\n")
+        }
+    }
+}
+
+Ejercicio 6:
+
+open class Phone(var isScreenLightOn: Boolean = false) {
+    open fun switchOn() {
+        isScreenLightOn = true
+    }
+    
+    fun switchOff() {
+        isScreenLightOn = false
+    }
+    
+    fun checkPhoneScreenLight() {
+        val phoneScreenLight = if (isScreenLightOn) "on" else "off"
+        println("The phone screen's light is $phoneScreenLight.")
+    }
+}
+
+class FoldablePhone(var estaPlegado: Boolean = true, isScreenLightOn: Boolean = false) : Phone(isScreenLightOn) {
+    
+    override fun switchOn() {
+        if (!estaPlegado) {
+            isScreenLightOn = true
+        }
+    }
+    
+    fun plegar() {
+        estaPlegado = true
+    }
+    
+    fun desplegar() {
+        estaPlegado = false
+    }
+}
+
+Ejercicio 7:
+
+fun main() {
+    val winningBid = Bid(5000, "Private Collector")
+    
+    println("Item A is sold at ${auctionPrice(winningBid, 2000)}.")
+    println("Item B is sold at ${auctionPrice(null, 3000)}.")
+}
+
+class Bid(val amount: Int, val bidder: String)
+ 
+fun auctionPrice(bid: Bid?, minimumPrice: Int): Int {
+    return bid?.amount ?: minimumPrice
+}
+
