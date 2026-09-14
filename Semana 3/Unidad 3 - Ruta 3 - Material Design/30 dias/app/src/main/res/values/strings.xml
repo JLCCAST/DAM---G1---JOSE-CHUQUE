@@ -1,0 +1,97 @@
+<resources>
+
+    <string name="app_name">Data30</string>
+
+    <string name="app_tagline">30 días para mejorar tus habilidades en datos</string>
+
+    <string name="day01_title">¿Qué es un dato?</string>
+    <string name="day01_description">Un dato es una representación de un hecho, evento o característica que puede ser almacenada, procesada y analizada.</string>
+
+    <string name="day02_title">¿Qué es Data Analytics?</string>
+    <string name="day02_description">Data Analytics consiste en examinar datos para encontrar patrones, obtener información útil y apoyar la toma de decisiones.</string>
+
+    <string name="day03_title">¿Qué es una base de datos?</string>
+    <string name="day03_description">Una base de datos permite almacenar, organizar y consultar información de manera estructurada y eficiente.</string>
+
+    <string name="day04_title">Introducción a SQL</string>
+    <string name="day04_description">SQL es un lenguaje utilizado para consultar, insertar, modificar y eliminar información almacenada en bases de datos relacionales.</string>
+
+    <string name="day05_title">SELECT</string>
+    <string name="day05_description">SELECT permite recuperar información específica de una o varias tablas de una base de datos.</string>
+
+    <string name="day06_title">WHERE</string>
+    <string name="day06_description">WHERE permite filtrar los registros de una consulta según una condición determinada.</string>
+
+    <string name="day07_title">ORDER BY</string>
+    <string name="day07_description">ORDER BY permite ordenar los resultados de una consulta de manera ascendente o descendente.</string>
+
+    <string name="day08_title">GROUP BY</string>
+    <string name="day08_description">GROUP BY permite agrupar registros que comparten un mismo valor para realizar análisis y cálculos.</string>
+
+    <string name="day09_title">Funciones agregadas</string>
+    <string name="day09_description">COUNT, SUM, AVG, MIN y MAX permiten realizar cálculos sobre grupos de datos.</string>
+
+    <string name="day10_title">JOIN</string>
+    <string name="day10_description">JOIN permite combinar información de diferentes tablas utilizando columnas relacionadas.</string>
+
+    <string name="day11_title">Claves primarias</string>
+    <string name="day11_description">Una clave primaria identifica de manera única cada registro de una tabla.</string>
+
+    <string name="day12_title">Claves foráneas</string>
+    <string name="day12_description">Una clave foránea establece una relación entre una tabla y otra mediante un campo relacionado.</string>
+
+    <string name="day13_title">Limpieza de datos</string>
+    <string name="day13_description">La limpieza de datos busca corregir errores, inconsistencias y problemas que puedan afectar un análisis.</string>
+
+    <string name="day14_title">Datos faltantes</string>
+    <string name="day14_description">Los valores faltantes pueden afectar los resultados de un análisis y deben identificarse antes de tomar decisiones.</string>
+
+    <string name="day15_title">Datos duplicados</string>
+    <string name="day15_description">Los registros duplicados pueden distorsionar métricas y resultados, por lo que deben detectarse y tratarse correctamente.</string>
+
+    <string name="day16_title">Excel para análisis</string>
+    <string name="day16_description">Excel ofrece herramientas para organizar, explorar y analizar información mediante fórmulas, filtros y tablas.</string>
+
+    <string name="day17_title">Tablas dinámicas</string>
+    <string name="day17_description">Las tablas dinámicas permiten resumir y analizar grandes cantidades de información rápidamente.</string>
+
+    <string name="day18_title">Introducción a Power BI</string>
+    <string name="day18_description">Power BI permite conectar datos, transformarlos y crear visualizaciones interactivas para facilitar su análisis.</string>
+
+    <string name="day19_title">Visualización de datos</string>
+    <string name="day19_description">Una buena visualización permite comunicar patrones y tendencias de los datos de manera clara y rápida.</string>
+
+    <string name="day20_title">Dashboards</string>
+    <string name="day20_description">Un dashboard reúne indicadores y visualizaciones importantes para ofrecer una visión general de una situación.</string>
+
+    <string name="day21_title">KPIs</string>
+    <string name="day21_description">Los indicadores clave de desempeño permiten medir el progreso hacia objetivos específicos.</string>
+
+    <string name="day22_title">Introducción a Python</string>
+    <string name="day22_description">Python es un lenguaje ampliamente utilizado para análisis de datos, automatización y desarrollo de soluciones relacionadas con información.</string>
+
+    <string name="day23_title">Pandas</string>
+    <string name="day23_description">Pandas es una biblioteca de Python que facilita la manipulación y análisis de datos estructurados.</string>
+
+    <string name="day24_title">DataFrames</string>
+    <string name="day24_description">Un DataFrame es una estructura tabular que permite trabajar con filas y columnas de información.</string>
+
+    <string name="day25_title">Gráficos con datos</string>
+    <string name="day25_description">Los gráficos permiten transformar datos numéricos en representaciones visuales que facilitan su interpretación.</string>
+
+    <string name="day26_title">ETL</string>
+    <string name="day26_description">ETL significa extraer, transformar y cargar datos para prepararlos para su almacenamiento o análisis.</string>
+
+    <string name="day27_title">Data Warehouse</string>
+    <string name="day27_description">Un Data Warehouse centraliza información preparada para consultas, análisis y generación de reportes.</string>
+
+    <string name="day28_title">Data Engineering</string>
+    <string name="day28_description">La ingeniería de datos se enfoca en construir procesos y sistemas que permitan recopilar, transformar y disponibilizar datos.</string>
+
+    <string name="day29_title">De datos a insights</string>
+    <string name="day29_description">El objetivo del análisis no es solamente encontrar datos, sino convertirlos en información útil para tomar mejores decisiones.</string>
+
+    <string name="day30_title">Construye tu dashboard</string>
+    <string name="day30_description">Combina SQL, limpieza de datos, visualización y KPIs para crear un dashboard que comunique información relevante.</string>
+
+</resources>
