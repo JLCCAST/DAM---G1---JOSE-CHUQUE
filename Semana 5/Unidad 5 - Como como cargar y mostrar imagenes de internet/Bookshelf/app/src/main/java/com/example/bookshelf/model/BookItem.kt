@@ -18,5 +18,6 @@ data class VolumeInfo(
 )
 
 data class ImageLinks(
-    val thumbnail: String?
+    val smallThumbnail: String? = null,
+    val thumbnail: String? = null
 )

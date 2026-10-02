@@ -14,7 +14,9 @@ class NetworkBooksRepository(
         val thumbnails = mutableListOf<String>()
 
         searchResponse.items?.forEach { book ->
-            book.volumeInfo?.imageLinks?.thumbnail?.let { url ->
+            val imageUrl = book.volumeInfo?.imageLinks?.thumbnail
+                ?: book.volumeInfo?.imageLinks?.smallThumbnail
+            imageUrl?.let { url ->
                 thumbnails.add(url.replace("http://", "https://"))
             }
         }

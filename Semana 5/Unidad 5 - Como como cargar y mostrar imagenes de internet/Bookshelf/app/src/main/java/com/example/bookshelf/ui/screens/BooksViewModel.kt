@@ -30,7 +30,7 @@ class BooksViewModel(private val booksRepository: BooksRepository) : ViewModel()
         getBooks("jazz history")
     }
 
-    fun getBooks(query: String) {
+    fun getBooks(query: String = "jazz history") {
         viewModelScope.launch {
             booksUiState = BooksUiState.Loading
             booksUiState = try {
@@ -39,6 +39,8 @@ class BooksViewModel(private val booksRepository: BooksRepository) : ViewModel()
             } catch (e: IOException) {
                 BooksUiState.Error
             } catch (e: HttpException) {
+                BooksUiState.Error
+            } catch (e: Exception) {
                 BooksUiState.Error
             }
         }

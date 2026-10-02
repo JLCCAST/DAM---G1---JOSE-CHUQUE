@@ -33,13 +33,13 @@ fun HomeScreen(
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
     when (booksUiState) {
-        is BooksUiState.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
+        is BooksUiState.Loading -> LoadingScreen(modifier = modifier.padding(contentPadding).fillMaxSize())
         is BooksUiState.Success -> BooksGridScreen(
             thumbnails = booksUiState.photos,
-            modifier = modifier.fillMaxWidth(),
+            modifier = modifier.fillMaxSize(),
             contentPadding = contentPadding
         )
-        is BooksUiState.Error -> ErrorScreen(retryAction, modifier = modifier.fillMaxSize())
+        is BooksUiState.Error -> ErrorScreen(retryAction, modifier = modifier.padding(contentPadding).fillMaxSize())
     }
 }
 

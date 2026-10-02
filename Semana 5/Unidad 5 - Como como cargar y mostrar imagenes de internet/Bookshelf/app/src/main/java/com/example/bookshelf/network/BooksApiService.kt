@@ -7,9 +7,9 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface BooksApiService {
-    @GET("volumes?key=AIzaSyD0ZQilwhEfd-L9MXGmTJ6kKj2ccrWIPDA")
+    @GET("volumes")
     suspend fun searchBooks(@Query("q") query: String): QueryResponse
 
-    @GET("volumes/{volumeId}?key=AIzaSyD0ZQilwhEfd-L9MXGmTJ6kKj2ccrWIPDA")
+    @GET("volumes/{volumeId}")
     suspend fun getBookDetails(@Path("volumeId") volumeId: String): BookDetailResponse
 }
